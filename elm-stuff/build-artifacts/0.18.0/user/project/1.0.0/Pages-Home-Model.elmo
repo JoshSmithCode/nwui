@@ -1,0 +1,4 @@
+var _user$project$Pages_Home_Model$initialHomeModel = {welcome: ''};
+var _user$project$Pages_Home_Model$HomeModel = function (a) {
+	return {welcome: a};
+};

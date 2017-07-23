@@ -1,0 +1,5 @@
+var _user$project$Model$initialModel = {route: _user$project$Routes$NotFound, page: _user$project$Types$NoPage};
+var _user$project$Model$Model = F2(
+	function (a, b) {
+		return {route: a, page: b};
+	});

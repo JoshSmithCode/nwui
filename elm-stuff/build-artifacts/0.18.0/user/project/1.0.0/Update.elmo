@@ -1,0 +1,36 @@
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p0 = {ctor: '_Tuple2', _0: msg, _1: model.page};
+		_v0_3:
+		do {
+			if (_p0.ctor === '_Tuple2') {
+				switch (_p0._0.ctor) {
+					case 'UrlChange':
+						return A2(_user$project$UpdateRoutes$urlChange, _p0._0._0, model);
+					case 'Navigate':
+						return A2(_user$project$UpdateRoutes$routeChange, _p0._0._0, model);
+					default:
+						if ((_p0._1.ctor === 'Loaded') && (_p0._1._0.ctor === 'QuickNotePage')) {
+							return A2(
+								_elm_lang$core$Platform_Cmd_ops['!'],
+								_elm_lang$core$Native_Utils.update(
+									model,
+									{
+										page: _user$project$Types$Loaded(
+											_user$project$Types$QuickNotePage(
+												A2(_user$project$Pages_QuickNote_Update$quickNoteUpdate, _p0._0._0, _p0._1._0._0)))
+									}),
+								{ctor: '[]'});
+						} else {
+							break _v0_3;
+						}
+				}
+			} else {
+				break _v0_3;
+			}
+		} while(false);
+		return A2(
+			_elm_lang$core$Platform_Cmd_ops['!'],
+			model,
+			{ctor: '[]'});
+	});

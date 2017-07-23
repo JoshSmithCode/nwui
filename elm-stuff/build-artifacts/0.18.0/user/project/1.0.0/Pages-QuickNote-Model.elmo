@@ -1,0 +1,9 @@
+var _user$project$Pages_QuickNote_Model$initialQuickNoteModel = {
+	noteBody: '',
+	noteTitle: '',
+	notes: {ctor: '[]'}
+};
+var _user$project$Pages_QuickNote_Model$QuickNoteModel = F3(
+	function (a, b, c) {
+		return {noteBody: a, noteTitle: b, notes: c};
+	});

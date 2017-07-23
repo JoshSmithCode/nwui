@@ -1,0 +1,7 @@
+var _user$project$Pages_QuickNote_Msg$AddNote = {ctor: 'AddNote'};
+var _user$project$Pages_QuickNote_Msg$UpdateNoteBody = function (a) {
+	return {ctor: 'UpdateNoteBody', _0: a};
+};
+var _user$project$Pages_QuickNote_Msg$UpdateNoteTitle = function (a) {
+	return {ctor: 'UpdateNoteTitle', _0: a};
+};

@@ -1,0 +1,70 @@
+var _user$project$UpdateRoutes$updateRoute = F2(
+	function (route, model) {
+		var _p0 = route;
+		if (_p0.ctor === 'Nothing') {
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				_elm_lang$core$Native_Utils.update(
+					model,
+					{route: _user$project$Routes$NotFound, page: _user$project$Types$NoPage}),
+				{ctor: '[]'});
+		} else {
+			switch (_p0._0.ctor) {
+				case 'NotFound':
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						_elm_lang$core$Native_Utils.update(
+							model,
+							{route: _user$project$Routes$NotFound, page: _user$project$Types$NoPage}),
+						{ctor: '[]'});
+				case 'Home':
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						_elm_lang$core$Native_Utils.update(
+							model,
+							{
+								route: _user$project$Routes$Home,
+								page: _user$project$Types$Loaded(
+									_user$project$Types$HomePage(_user$project$Pages_Home_Model$initialHomeModel))
+							}),
+						{ctor: '[]'});
+				default:
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						_elm_lang$core$Native_Utils.update(
+							model,
+							{
+								route: _user$project$Routes$QuickNote,
+								page: _user$project$Types$Loaded(
+									_user$project$Types$QuickNotePage(_user$project$Pages_QuickNote_Model$initialQuickNoteModel))
+							}),
+						{ctor: '[]'});
+			}
+		}
+	});
+var _user$project$UpdateRoutes$routeChange = F2(
+	function (route, model) {
+		var _p1 = A2(
+			_user$project$UpdateRoutes$updateRoute,
+			_elm_lang$core$Maybe$Just(route),
+			model);
+		var newModel = _p1._0;
+		var cmd = _p1._1;
+		return A2(
+			_elm_lang$core$Platform_Cmd_ops['!'],
+			newModel,
+			{
+				ctor: '::',
+				_0: _user$project$Routes$navigate(route),
+				_1: {
+					ctor: '::',
+					_0: cmd,
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _user$project$UpdateRoutes$urlChange = F2(
+	function (location, model) {
+		var route = _user$project$Routes$decode(location);
+		return A2(_user$project$UpdateRoutes$updateRoute, route, model);
+	});

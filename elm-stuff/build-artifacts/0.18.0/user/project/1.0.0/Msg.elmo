@@ -1,0 +1,9 @@
+var _user$project$Msg$QuickNoteMsg = function (a) {
+	return {ctor: 'QuickNoteMsg', _0: a};
+};
+var _user$project$Msg$Navigate = function (a) {
+	return {ctor: 'Navigate', _0: a};
+};
+var _user$project$Msg$UrlChange = function (a) {
+	return {ctor: 'UrlChange', _0: a};
+};
