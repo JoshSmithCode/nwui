@@ -1,4 +1,0 @@
-var _user$project$Entities$Note = F2(
-	function (a, b) {
-		return {title: a, body: b};
-	});
